@@ -3,200 +3,134 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SUNSEAT — A brighter place to sit. (A fictional product.)</title>
-<meta name="description" content="SUNSEAT is a fictional premium toilet-seat concept and a parody of wellness marketing. Not for sale or use.">
+<title>SUNSEAT — The toilet seat that replaces yours.</title>
+<meta name="description" content="SUNSEAT is a drop-in replacement toilet seat in round and elongated sizes, five popular styles from builder's grade to comfort plus, and colors to match your fixture. Prototype concept; not yet cleared for sale.">
 <link rel="icon" href="assets/sunburst.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
 <script src="script.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="strip"><p>A very bright idea. A very fictional product. <a href="#science">Read the disclosures</a></p></div>
+<div class="strip"><p>Drop-in replacement. Fits standard round and elongated bowls. <a href="#status">Product status</a></p></div>
 
 <header class="site-header">
   <a class="brand" href="#top" aria-label="SUNSEAT home"><img src="assets/sunburst.svg" alt="" width="30" height="30"><span>SUNSEAT</span></a>
   <nav aria-label="Primary">
     <ul>
-      <li><a href="#ritual">The ritual</a></li>
-      <li><a href="#collection">The collection</a></li>
-      <li><a href="#science">The science</a></li>
+      <li><a href="#configurator">Build yours</a></li>
+      <li><a href="#styles">Styles</a></li>
+      <li><a href="#science">How it works</a></li>
+      <li><a href="#faq">FAQ</a></li>
     </ul>
   </nav>
-  <a class="btn btn-dark" href="#collection">Find your sunshine</a>
+  <a class="btn btn-dark" href="#configurator">Choose your seat</a>
 </header>
 
 <main id="main">
 <section class="hero" id="top">
   <div class="hero-copy">
-    <p class="eyebrow">Wellness. With a little cheek.</p>
-    <h1>A brighter place <em>to sit.</em></h1>
-    <p class="lede">Meet the world's most unnecessarily considered toilet seat. A little glow. A lot of engineering. An entirely new meaning to personal sunshine.</p>
-    <p class="cta-row"><a class="btn btn-dark" href="#collection">Explore the collection</a> <a class="btn btn-ghost" href="#ritual">See how it works</a></p>
-    <p class="notice"><strong>Fictional concept. Not for sale or use.</strong></p>
+    <p class="eyebrow">Replaces your standard toilet seat</p>
+    <h1>Your seat, <em>upgraded.</em></h1>
+    <p class="lede">SUNSEAT swaps in for your existing seat using the standard two-bolt mount. Pick your bowl shape, your style and a color that matches your fixture, then add a low-power light module on the underside.</p>
+    <p class="cta-row"><a class="btn btn-dark" href="#configurator">Build your seat</a> <a class="btn btn-ghost" href="#science">The science behind it</a></p>
   </div>
-  <figure class="hero-art">
-    <img src="assets/hero.svg" width="600" height="520" alt="Illustration of an ivory toilet seat with the lid open, a ring-shaped opening with a warm amber glow, and technical callouts for the hinge, battery, USB-C port and proposed sensor.">
-    <figcaption>Warm amber glow is purely illustrative. It does not depict invisible UVB.</figcaption>
-  </figure>
+  <div class="hero-art" id="hero-seat" role="img" aria-label="Top-down view of a white elongated SUNSEAT toilet seat"></div>
 </section>
 
-<div class="ribbon" aria-label="Brand slogans"><ul>
-  <li>Your throne. Upgraded.</li><li>Sit. Glow. Go.</li><li>USB-C. Obviously.</li><li>A little too much innovation.</li>
+<div class="ribbon" aria-label="Highlights"><ul>
+  <li>Standard 2-bolt mount</li><li>Round &amp; elongated</li><li>Soft-close hinges</li><li>8 fixture-matching colors</li><li>USB-C rechargeable</li>
 </ul></div>
 
-<section class="section campaign">
-  <h2>Wellness found the light. <em>We found a seat.</em></h2>
-  <p>Inspired by the conversation. Not validated by the research.</p>
+<section class="section" id="configurator">
+  <p class="eyebrow">Build yours</p>
+  <h2>Match your bathroom. <em>Pick, preview, done.</em></h2>
+  <div class="config">
+    <div class="config-view"><div id="config-seat" role="img" aria-label="Seat preview"></div>
+      <p class="config-name" id="config-name" aria-live="polite"></p></div>
+    <div class="config-ui">
+      <fieldset><legend>Bowl shape</legend>
+        <div class="seg" id="opt-shape"></div></fieldset>
+      <fieldset><legend>Style</legend>
+        <div class="seg" id="opt-style"></div>
+        <p class="hint" id="style-desc" aria-live="polite"></p></fieldset>
+      <fieldset><legend>Color</legend>
+        <div class="swatches" id="opt-color"></div></fieldset>
+      <p class="price" id="config-price"></p>
+      <p class="fine">Prices are target pricing for the planned retail launch. Colors are screen approximations; compare with your fixture before ordering once available.</p>
+    </div>
+  </div>
 </section>
 
-<section class="section" id="ritual">
-  <p class="eyebrow">The ritual</p>
-  <h2>Three steps. <em>Zero evidence.</em></h2>
-  <p class="sub">Everything below is a concept feature, not a tested engineering claim.</p>
-  <ol class="steps">
-    <li class="reveal"><span class="num">01</span><h3>Take your seat</h3><p>A proposed pressure sensor would notice that you have, in fact, sat down.</p></li>
-    <li class="reveal"><span class="num">02</span><h3>Enjoy the spectacle</h3><p>A fictional UVB lamp concept would switch on. It is not a proven or safe therapy.</p></li>
-    <li class="reveal"><span class="num">03</span><h3>Get up. Get on.</h3><p>The proposed light would switch off when you stand, and you would carry on with your day.</p></li>
-  </ol>
+<section class="section tint" id="styles">
+  <p class="eyebrow">Styles</p>
+  <h2>From builder's grade <em>to comfort plus.</em></h2>
+  <p class="sub">Five profiles modeled on what you'll find in the seat aisle, so there's a SUNSEAT for every bathroom and budget.</p>
+  <div class="tiers" id="style-grid"></div>
+  <p class="fine">Style names such as Delta-style, Kohler-style and Glacier Bay-style describe the look and mounting footprint our seats are designed to be comparable with. SUNSEAT is not affiliated with, endorsed by or a product of Delta, Kohler, Glacier Bay or The Home Depot; all trademarks belong to their owners.</p>
 </section>
 
 <section class="section dark" id="engineering">
   <div class="split">
     <div>
-      <p class="eyebrow">Product engineering</p>
-      <h2>Big seat <em>energy.</em></h2>
-      <p>An anatomy of the concept. Every item is a proposal on a drawing board, not a tested feature.</p>
+      <p class="eyebrow">Engineering</p>
+      <h2>Built like a seat. <em>Works like a seat first.</em></h2>
       <ul class="spec">
-        <li><strong>Soft-close lid and hinges.</strong> So the lid never makes an entrance it can't take back.</li>
-        <li><strong>Smooth, wipe-clean concept shell.</strong> Normal cleaning still applies.</li>
-        <li><strong>Proposed pressure activation.</strong> Sit to start, stand to stop.</li>
-        <li><strong>Rechargeable battery</strong> with <strong>USB-C charging.</strong></li>
-        <li><strong>Proposed battery indicator</strong> on higher tiers.</li>
+        <li><strong>Standard mount.</strong> Two adjustable bolts fit the common 5½-inch bolt spacing on round and elongated bowls.</li>
+        <li><strong>Soft-close, quick-release hinges</strong> on every style above builder's grade.</li>
+        <li><strong>Sealed underside module.</strong> A small light panel in the seat ring, rear-mounted rechargeable battery and USB-C port at the hinge.</li>
+        <li><strong>Sit sensing.</strong> A pressure sensor starts the session timer and stops it when you stand.</li>
+        <li><strong>Wipe-clean finish</strong> in molded plastic, with a vinyl-wrapped cushion on Comfort Plus.</li>
       </ul>
-      <p class="fine"><strong>About the numbers:</strong> the fictional brief imagines “3–6 months or 600 operating hours per full charge.” These are unverified, aspirational figures, not measured performance or a guarantee. Real runtime would depend on lamp power, battery capacity, sensor draw and usage. We make no claims that the concept is waterproof, universally compatible, safety-certified or tested.</p>
     </div>
-    <figure class="anatomy"><img src="assets/sunseat-plus.svg" width="600" height="520" loading="lazy" alt="Anatomy illustration of the SUNSEAT Plus concept with callouts for soft-close hinge, USB-C port, proposed sit sensor and battery indicator."></figure>
-  </div>
-</section>
-
-<section class="section" id="collection">
-  <p class="eyebrow">The collection</p>
-  <h2>Every body. <em>Every bottom line.</em></h2>
-  <p class="sub">Illustrative US dollar prices. No checkout, no waitlist, no data collected.</p>
-  <div class="tiers">
-    <article class="tier">
-      <img src="assets/sunseat-one.svg" width="600" height="520" loading="lazy" alt="SUNSEAT One in a chalk finish, open lid, ring-shaped opening.">
-      <h3>SUNSEAT One</h3><p class="price">$79 <small>illustrative</small></p>
-      <p class="tag">For the curious. And the cost-conscious.</p>
-      <ul><li>Chalk finish</li><li>Proposed sit activation</li><li>USB-C</li><li>Soft-close</li></ul>
-      <button type="button" class="btn btn-ghost" data-dialog="d-one">View details</button>
-    </article>
-    <article class="tier featured">
-      <p class="badge">Most considered</p>
-      <img src="assets/sunseat-plus.svg" width="600" height="520" loading="lazy" alt="SUNSEAT Plus in a warm shell finish, open lid, ring-shaped opening.">
-      <h3>SUNSEAT Plus</h3><p class="price">$149 <small>illustrative</small></p>
-      <p class="tag">A little extra. In every possible way.</p>
-      <ul><li>Warm shell finish</li><li>Everything in One</li><li>Proposed adjustable comfort fit</li><li>Proposed battery indicator</li></ul>
-      <button type="button" class="btn btn-dark" data-dialog="d-plus">View details</button>
-    </article>
-    <article class="tier">
-      <img src="assets/sunseat-atelier.svg" width="600" height="520" loading="lazy" alt="SUNSEAT Atelier in a moss and sage finish, open lid, ring-shaped opening.">
-      <h3>SUNSEAT Atelier</h3><p class="price">$299 <small>illustrative</small></p>
-      <p class="tag">For people who call it a powder room.</p>
-      <ul><li>Moss / sage finish</li><li>Everything in Plus</li><li>Designer finishes</li><li>Fictional numbered edition</li></ul>
-      <button type="button" class="btn btn-ghost" data-dialog="d-atelier">View details</button>
-    </article>
+    <div class="anatomy" id="anatomy-seat" role="img" aria-label="Plus-style SUNSEAT seat in biscuit with callouts"></div>
   </div>
 </section>
 
 <section class="section science" id="science">
-  <p class="eyebrow">The science</p>
-  <h2>Cheeky marketing. <em>Straight facts.</em></h2>
-  <p class="sub">The joke is the product. The health information is not a joke.</p>
-  <ul class="facts">
-    <li>UVB can stimulate vitamin D synthesis in skin. Vitamin D is produced in the body, not absorbed from light.</li>
-    <li>Red light does not produce vitamin D.</li>
-    <li>Vitamin D supports normal immune function. That does not prove this product improves immunity.</li>
-    <li>UVB can cause burns, DNA damage and increased skin-cancer risk.</li>
-    <li>Sensitivity of any body area is not evidence of superior vitamin D production.</li>
-    <li>There is no established benefit of targeted anal UVB exposure.</li>
-    <li>SUNSEAT has no proven vitamin D, antibacterial, immune or therapeutic benefits. It does not claim to disinfect skin or surfaces, and UVB is not the same as germicidal UVC.</li>
-    <li>Please do not try DIY UVB exposure. Ask a qualified healthcare professional about your vitamin D needs, and keep cleaning your bathroom normally.</li>
-  </ul>
-  <p class="sources">Background reading: <a href="https://ods.od.nih.gov/factsheets/VitaminD-Consumer/" rel="noopener">NIH Office of Dietary Supplements, Vitamin D</a> · <a href="https://www.fda.gov/radiation-emitting-products/tanning/risks-tanning" rel="noopener">FDA, Risks of tanning</a>. We could not open these pages while building this site, so the statements above reflect general public-health consensus rather than a fresh check of those pages.</p>
+  <p class="eyebrow">How it works</p>
+  <h2>The reasoning, <em>step by step.</em></h2>
+  <p class="sub">SUNSEAT is built on a chain of real, published findings. Here is the logic, and where each link is strong or weak.</p>
+  <ol class="chain">
+    <li><h3>1. Skin makes vitamin D from UVB</h3><p>When 290–315 nm UVB reaches skin, it converts 7-dehydrocholesterol into previtamin D3, which becomes vitamin D. This is textbook physiology (Holick, <cite>N Engl J Med</cite> 2007). <span class="grade strong">Well established</span></p></li>
+    <li><h3>2. Narrowband UVB is the efficient band</h3><p>The action spectrum for previtamin D3 peaks near 295–300 nm, and narrowband sources around 295–311 nm are used in clinical phototherapy. A seat-mounted source would target this band. <span class="grade strong">Well established</span></p></li>
+    <li><h3>3. A short, brief-contact dose</h3><p>Because exposure is on a timer that starts when you sit, the design aims for small, bounded doses rather than open-ended exposure, with sensor lockouts similar in spirit to safeguards reported for FDA-reviewed OTC UVB devices. <span class="grade mid">Plausible design principle</span></p></li>
+    <li><h3>4. Sit-sensing keeps light on skin only</h3><p>The pressure sensor means the lamp is only active under load, so it is not shining into the room. <span class="grade mid">Engineering rationale</span></p></li>
+    <li><h3>5. The body area is the open question</h3><p>Most vitamin D research uses larger, sun-exposed areas such as the back and legs. Whether seated contact area, which is small and rarely exposed, yields meaningful vitamin D is unproven. <span class="grade weak">Unproven, needs testing</span></p></li>
+    <li><h3>6. Immune benefits are indirect</h3><p>Vitamin D supports normal immune function, but raising your levels through any route does not guarantee fewer illnesses. We make no immune claims. <span class="grade weak">Not claimed</span></p></li>
+  </ol>
+  <p class="sources">Further reading: <a href="https://ods.od.nih.gov/factsheets/VitaminD-Consumer/" rel="noopener">NIH Office of Dietary Supplements, Vitamin D</a> · <a href="https://www.nejm.org/doi/full/10.1056/NEJMra070553" rel="noopener">Holick, Vitamin D Deficiency, NEJM 2007</a> · <a href="https://www.fda.gov/radiation-emitting-products/tanning/risks-tanning" rel="noopener">FDA, Risks of tanning</a> · <a href="https://www.forbes.com/sites/tanyaakim/2026/08/12/meet-solius-the-first-otc-uvb-device-that-got-its-own-fda-category/" rel="noopener">Forbes on SOLIUS, a different OTC UVB device</a>. Links were not re-verified while building this page.</p>
 </section>
 
-<section class="section context" id="context">
-  <p class="eyebrow">Context</p>
-  <h2>Real reporting. <em>A different device.</em></h2>
+<section class="section" id="status">
+  <p class="eyebrow">Product status</p>
+  <h2>Where we are. <em>Plainly.</em></h2>
   <div class="split">
-    <div>
-      <p>In an article dated August 12, 2026, Forbes contributor Tanya Akim wrote about SOLIUS, a different over-the-counter UVB device. As reported there, the article describes an FDA clearance for a device called Solius Pro, a sham-controlled trial, and device safeguards such as skin measurement, distance sensing and lockouts. The article also notes the trial was not a head-to-head comparison with oral supplements and acknowledges uncertainty around some company claims.</p>
-      <p><a href="https://www.forbes.com/sites/tanyaakim/2026/08/12/meet-solius-the-first-otc-uvb-device-that-got-its-own-fda-category/" rel="noopener">Read the original article on Forbes</a>.</p>
-    </div>
-    <div class="fine">
-      <ul>
-        <li>Any clearance applies to the named device and its authorized indication. It does not authorize SUNSEAT, anal exposure, antibacterial claims or immune treatment.</li>
-        <li>It does not establish that UVB is superior to oral supplements.</li>
-        <li>SUNSEAT has no FDA authorization.</li>
-        <li>SUNSEAT is not affiliated with or endorsed by SOLIUS, Forbes or the FDA, and Forbes has not covered SUNSEAT.</li>
-        <li>These are article-reported details. The article is summarized here in our own words and the underlying FDA and clinical records were not independently verified. Specific figures are omitted for that reason.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <p class="eyebrow">Reviews</p>
-  <h2>Unreal product. <em>Unreal reviews.</em></h2>
-  <p class="sub">All testimonials are invented. They are not real customer experiences or medical evidence.</p>
-  <div class="quotes">
-    <blockquote class="reveal"><p>“I've never felt so seen by an object I sit on.”</p><footer>Jamie L., fictional early enthusiast</footer></blockquote>
-    <blockquote class="reveal"><p>“Finally, a conversation piece that ends the conversation.”</p><footer>Morgan R., fictional interior overthinker</footer></blockquote>
-    <blockquote class="reveal"><p>“The USB-C really brings the whole bathroom together.”</p><footer>Alex T., fictional cable minimalist</footer></blockquote>
+    <ul class="spec dark-text">
+      <li>SUNSEAT is a prototype concept. It is not yet for sale and has not been cleared or authorized by the FDA or any safety body.</li>
+      <li>The design rationale above is not proof of benefit. UVB can cause burns, DNA damage and skin-cancer risk, and any real product would need dosimetry, safety testing and regulatory review.</li>
+      <li>Battery life targets (months of typical use per charge) are design goals, not measurements.</li>
+      <li>This is not medical advice. Ask a healthcare professional about your vitamin D needs.</li>
+    </ul>
+    <p class="fine">SUNSEAT is not affiliated with SOLIUS, Forbes, the FDA, Delta, Kohler, Glacier Bay or The Home Depot. This site collects no personal information.</p>
   </div>
 </section>
 
 <section class="section" id="faq">
   <p class="eyebrow">FAQ</p>
-  <h2>Questions, <em>answered seriously.</em></h2>
+  <h2>Questions, <em>answered.</em></h2>
   <div class="faq">
-    <details><summary>Is this a real product?</summary><p>No. SUNSEAT is a fictional concept and a parody of wellness marketing. It is not for sale or use, and it is not a medical device.</p></details>
-    <details><summary>Does it use red light or UVB?</summary><p>The original premise used red light. The fictional concept switched to UVB because UVB can stimulate vitamin D production in skin. The amber glow in our illustrations is decorative and does not depict invisible UVB. Red light does not produce vitamin D.</p></details>
-    <details><summary>Can I get vitamin D this way?</summary><p>There is no established benefit of targeted anal UVB exposure, and UVB can cause burns, DNA damage and skin-cancer risk. Please don't try it. Ask a qualified healthcare professional about your vitamin D needs.</p></details>
-    <details><summary>What about the Forbes article on SOLIUS?</summary><p>It is real reporting about a different device. Any clearance applies only to that device and its authorized indication. It does not apply to SUNSEAT, and there is no affiliation or endorsement. See <a href="#context">the context section</a>.</p></details>
-    <details><summary>Will it really last 600 hours?</summary><p>That figure is an unverified, aspirational number in a fictional brief. Real runtime would depend on lamp power, battery capacity, sensor draw and usage. It is not a measurement or a guarantee.</p></details>
-    <details><summary>Does it fit every toilet and every body?</summary><p>We make no compatibility claims, because there is no product. The collection is imagined to suit a range of bodies, ages of adult users and budgets, but nothing here has been tested.</p></details>
-    <details><summary>Can I order one or join a waitlist?</summary><p>No. There are no orders, no waitlist and no forms. This site collects no personal information.</p></details>
+    <details><summary>Will it fit my toilet?</summary><p>SUNSEAT is designed for the standard two-bolt mounting pattern on round-front and elongated bowls. Measure bolt-hole centers and bowl length (about 16½ in round, 18½ in elongated) before ordering once available. Unusual or one-piece-specialty bowls may need a model-specific seat.</p></details>
+    <details><summary>Can I match my color?</summary><p>Eight colors are planned, including White, Bone, Biscuit and Almond to match common fixture finishes. Fixture colors vary by manufacturer and age, so compare to a sample in person.</p></details>
+    <details><summary>Is it safe?</summary><p>That is exactly what testing would need to show. The design uses a timer, sit sensor and a low-dose target, but nothing is validated yet. See the status section.</p></details>
+    <details><summary>Does it really give you vitamin D?</summary><p>UVB does drive vitamin D synthesis in skin. Whether a seated exposure area delivers a meaningful amount is unproven.</p></details>
+    <details><summary>Can I buy one?</summary><p>Not yet. There are no orders or waitlist on this site.</p></details>
   </div>
-</section>
-
-<section class="section dark closing">
-  <h2>The future is bright. <em>Please remain seated.</em></h2>
-  <p class="cta-row"><a class="btn btn-light" href="#collection">Back to the collection</a></p>
 </section>
 </main>
 
 <footer class="site-footer">
-  <p class="foot-brand">SUNSEAT — Good design. Questionable premise.</p>
-  <p>SUNSEAT is a fictional concept and parody. Not for sale or use. Not a medical device, and not FDA-authorized. UVB can cause burns, DNA damage and increased skin-cancer risk. Not affiliated with SOLIUS, Forbes or the FDA.</p>
-  <p>Built with GitHub Copilot.</p>
+  <p class="foot-brand">SUNSEAT</p>
+  <p>Prototype concept, not for sale, not a medical device and not FDA-authorized. UVB can cause burns, DNA damage and increased skin-cancer risk. Brand names mentioned are trademarks of their owners and are used only to describe comparable styles.</p>
 </footer>
-
-<dialog id="d-one" aria-labelledby="d-one-t"><div class="dlg"><button type="button" class="close" data-close aria-label="Close dialog">×</button>
-  <img src="assets/sunseat-one.svg" width="600" height="520" alt="SUNSEAT One concept illustration.">
-  <h2 id="d-one-t">SUNSEAT One</h2><p class="price">$79 <small>illustrative price</small></p>
-  <p>For the curious. And the cost-conscious. Chalk finish, proposed sit activation, USB-C and soft-close.</p>
-  <p class="fine"><strong>Fictional product.</strong> Not for sale or use, not tested, not FDA-authorized. No payment or personal information is collected.</p></div></dialog>
-<dialog id="d-plus" aria-labelledby="d-plus-t"><div class="dlg"><button type="button" class="close" data-close aria-label="Close dialog">×</button>
-  <img src="assets/sunseat-plus.svg" width="600" height="520" alt="SUNSEAT Plus concept illustration.">
-  <h2 id="d-plus-t">SUNSEAT Plus</h2><p class="price">$149 <small>illustrative price</small></p>
-  <p>A little extra. In every possible way. Warm shell finish, everything in One, plus a proposed adjustable comfort fit and battery indicator.</p>
-  <p class="fine"><strong>Fictional product.</strong> Not for sale or use, not tested, not FDA-authorized. No payment or personal information is collected.</p></div></dialog>
-<dialog id="d-atelier" aria-labelledby="d-atelier-t"><div class="dlg"><button type="button" class="close" data-close aria-label="Close dialog">×</button>
-  <img src="assets/sunseat-atelier.svg" width="600" height="520" alt="SUNSEAT Atelier concept illustration.">
-  <h2 id="d-atelier-t">SUNSEAT Atelier</h2><p class="price">$299 <small>illustrative price</small></p>
-  <p>For people who call it a powder room. Moss/sage finish, everything in Plus, designer finishes and a fictional numbered edition.</p>
-  <p class="fine"><strong>Fictional product.</strong> Not for sale or use, not tested, not FDA-authorized. No payment or personal information is collected.</p></div></dialog>
 </body>
 </html>
