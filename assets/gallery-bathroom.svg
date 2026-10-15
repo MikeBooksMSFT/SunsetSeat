@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img">
+  <defs>
+    <linearGradient id="tile" x2="0" y2="1"><stop stop-color="#f2eee4"/><stop offset="1" stop-color="#d8d2c5"/></linearGradient>
+    <linearGradient id="ceramic" x2=".8" y2="1"><stop stop-color="#fff"/><stop offset=".7" stop-color="#e9eeeb"/><stop offset="1" stop-color="#c1cbc7"/></linearGradient>
+    <linearGradient id="seat" x2="0" y2="1"><stop stop-color="#f8f5e9"/><stop offset="1" stop-color="#d6c5a3"/></linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="10"/></filter>
+  </defs>
+  <rect width="800" height="520" fill="url(#tile)"/>
+  <path d="M0 105h800M0 210h800M0 315h800M0 420h800M160 0v420M320 0v420M480 0v420M640 0v420" stroke="#c8c0b1" stroke-width="3"/>
+  <rect x="76" y="62" width="204" height="217" rx="5" fill="#acd3d7" stroke="#fff" stroke-width="14"/>
+  <path d="M178 67v205M84 168h187" stroke="#fff" stroke-width="8" opacity=".9"/>
+  <path d="M0 421h800v99H0z" fill="#b69d7a"/>
+  <path d="M0 432h800M100 421l40 99m150-99 24 99m160-99 1 99m162-99-30 99" stroke="#8b775d" stroke-width="3" opacity=".4"/>
+  <rect x="575" y="104" width="139" height="181" rx="13" fill="#a8b9a0"/>
+  <path d="M591 132h108M591 158h108M591 184h108M591 210h108M591 236h108" stroke="#dce5d5" stroke-width="5"/>
+  <ellipse cx="421" cy="434" rx="180" ry="29" fill="#263b31" opacity=".22" filter="url(#soft)"/>
+  <path d="M337 258h170v158q-4 49-42 62H371q-38-13-42-62z" fill="url(#ceramic)" stroke="#b4bfba" stroke-width="4"/>
+  <path d="M354 293h136v100q-3 29-31 39h-74q-28-10-31-39z" fill="#e7edeb"/>
+  <path d="M372 312h100v77q-4 26-25 31h-50q-21-5-25-31z" fill="#94b8b6"/>
+  <path d="M353 389h138q-5 47-39 60h-60q-34-13-39-60z" fill="url(#ceramic)" stroke="#b4bfba" stroke-width="3"/>
+  <path d="M313 255q0-19 20-22h180q20 3 20 22l-8 50q-3 27-30 29H351q-27-2-30-29z" fill="url(#seat)" stroke="#aa9d85" stroke-width="4"/>
+  <path d="M351 260h144l-5 32q-2 12-16 12H372q-14 0-16-12z" fill="#e9deca"/>
+  <path d="M379 266h89l-4 25q-1 7-9 7h-63q-8 0-9-7z" fill="#a7bfbb"/>
+  <rect x="353" y="231" width="22" height="28" rx="7" fill="#c5ccc8" stroke="#87938d" stroke-width="2"/>
+  <rect x="471" y="231" width="22" height="28" rx="7" fill="#c5ccc8" stroke="#87938d" stroke-width="2"/>
+  <rect x="43" y="462" width="220" height="38" rx="19" fill="#123524"/>
+  <text x="63" y="487" fill="#f7f1e3" font-family="system-ui,sans-serif" font-size="15" font-weight="700" letter-spacing="1.5">THE BATHROOM, ALREADY</text>
+</svg>

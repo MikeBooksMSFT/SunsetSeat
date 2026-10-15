@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#e1ead9"/><stop offset="1" stop-color="#c4d0bf"/></linearGradient>
+    <linearGradient id="shell" x2=".8" y2="1"><stop stop-color="#fff"/><stop offset=".55" stop-color="#f2f3ed"/><stop offset="1" stop-color="#bbc6bf"/></linearGradient>
+    <linearGradient id="metal" x2="0" y2="1"><stop stop-color="#fff"/><stop offset=".5" stop-color="#aab4b6"/><stop offset="1" stop-color="#f4f5f2"/></linearGradient>
+    <filter id="shadow"><feGaussianBlur stdDeviation="12"/></filter>
+  </defs>
+  <rect width="800" height="520" fill="url(#bg)"/>
+  <circle cx="665" cy="92" r="128" fill="#f2d39b" opacity=".35"/>
+  <ellipse cx="412" cy="414" rx="274" ry="50" fill="#123524" opacity=".2" filter="url(#shadow)"/>
+  <path d="M161 334q-17-32 14-57l61-48q24-19 58-19h277q31 0 51 20l53 51q25 27 9 56l-21 44q-15 32-53 35H230q-39-2-54-35z" fill="url(#shell)" stroke="#9eaaa2" stroke-width="5"/>
+  <path d="M241 275q12-25 45-25h268q31 0 48 24l28 38q16 23-11 34l-55 18H253l-55-18q-26-11-11-34z" fill="#dfe8e2"/>
+  <path d="M281 281q7-14 23-14h230q16 0 24 14l19 27q8 13-8 18l-42 13H312l-42-13q-16-5-8-18z" fill="#a2c1be"/>
+  <path d="M204 341h393" stroke="#fff" stroke-width="7" opacity=".7" stroke-linecap="round"/>
+  <rect x="299" y="207" width="70" height="34" rx="10" fill="url(#metal)" stroke="#7e8987" stroke-width="3"/>
+  <rect x="431" y="207" width="70" height="34" rx="10" fill="url(#metal)" stroke="#7e8987" stroke-width="3"/>
+  <rect x="329" y="215" width="15" height="7" rx="3.5" fill="#778582"/>
+  <rect x="461" y="215" width="15" height="7" rx="3.5" fill="#778582"/>
+  <circle cx="385" cy="354" r="11" fill="#e8892b"/>
+  <circle cx="385" cy="354" r="26" fill="#e8892b" opacity=".15"/>
+  <path d="M411 354h135l61-76" fill="none" stroke="#123524" stroke-width="3"/>
+  <circle cx="607" cy="276" r="6" fill="#123524"/>
+  <rect x="521" y="223" width="221" height="76" rx="18" fill="#123524"/>
+  <text x="543" y="255" fill="#e3efa0" font-family="system-ui,sans-serif" font-size="14" font-weight="700" letter-spacing="1.6">CONCEPT DETAIL</text>
+  <text x="543" y="280" fill="#f7f1e3" font-family="system-ui,sans-serif" font-size="17">Sensor + light module</text>
+  <rect x="54" y="54" width="221" height="72" rx="18" fill="#fffaf0" opacity=".9"/>
+  <text x="76" y="84" fill="#123524" font-family="system-ui,sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">ENGINEERING TODO</text>
+  <text x="76" y="108" fill="#123524" font-family="Georgia,serif" font-size="17" font-style="italic">Test the dose. Then talk.</text>
+</svg>
