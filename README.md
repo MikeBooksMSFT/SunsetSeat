@@ -18,6 +18,6 @@ No build step. From the repository root: `python3 -m http.server 8000`, then ope
 | --- | --- |
 | `index.html` | Single-page site: configurator, styles, engineering, rationale, status, FAQ. |
 | `styles.css` | Layout and styling. |
-| `script.js` | Generates the realistic seat renderings (SVG) and drives the configurator. |
-| `assets/sunburst.svg` | Brand mark and favicon. |
+| `script.js` | Generates the seat previews, gallery cards, fictional concept reactions and drives the configurator. |
+| `assets/*.svg` | Brand mark, original gallery illustrations and fictional persona portraits. |
 | `.github/workflows/pages.yml` | Deploys the repository root to GitHub Pages. |
