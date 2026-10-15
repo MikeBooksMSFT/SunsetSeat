@@ -20,12 +20,15 @@
       <li><a href="#configurator">Build yours</a></li>
       <li><a href="#why">Why a seat?</a></li>
       <li><a href="#styles">Styles</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#reviews">Reviews</a></li>
       <li><a href="#science">How it works</a></li>
       <li><a href="#press">Press</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li><a href="#invest">Investors</a></li>
     </ul>
   </nav>
-  <a class="btn btn-dark" href="#configurator">Choose your seat</a>
+  <a class="btn btn-dark" href="#waitlist">Join the waitlist</a>
 </header>
 
 <main id="main">
@@ -34,9 +37,9 @@
     <p class="eyebrow">Replaces your standard toilet seat</p>
     <h1>Your seat, <em>upgraded.</em></h1>
     <p class="lede">SUNSEAT swaps in for your existing seat using the standard two-bolt mount. Pick your bowl shape, your style and a color that matches your fixture, then add a low-power light module on the underside.</p>
-    <p class="cta-row"><a class="btn btn-dark" href="#configurator">Build your seat</a> <a class="btn btn-ghost" href="#science">The science behind it</a></p>
+    <p class="cta-row"><a class="btn btn-dark" href="#configurator">Build your seat</a> <a class="btn btn-ghost" href="#waitlist">Join the waitlist</a></p>
   </div>
-  <div class="hero-art" id="hero-seat" role="img" aria-label="Top-down view of a white elongated SUNSEAT toilet seat"></div>
+  <div class="hero-art" role="img" aria-label="A white SUNSEAT seat installed on a toilet in a bathroom"><div id="hero-seat"></div></div>
 </section>
 
 <div class="ribbon" aria-label="Highlights"><ul>
@@ -82,6 +85,60 @@
     <article><h3>The skin hypothesis</h3><p>The idea is that thin, rarely sun-exposed skin may respond differently to UVB than the weathered skin on your arms. Thin skin does let more light and topical agents through, and it is why we are curious. <span class="grade weak">Hypothesis, unproven for vitamin D</span></p></article>
   </div>
   <p class="fine"><strong>Straight talk:</strong> “sensitive means it absorbs best” is the pitch, not a finding. Skin sensitivity is not evidence of better vitamin D production, and no study shows this site is better than the sun-exposed areas researchers normally use. Delicate skin is also more vulnerable to UVB damage. That is exactly why SUNSEAT would need dose testing and safety review before it is anything more than a prototype.</p>
+</section>
+
+<section class="section" id="gallery">
+  <p class="eyebrow">Gallery</p>
+  <h2>On its own. <em>And at home.</em></h2>
+  <p class="sub">Studio views of each style, then the same seats installed on a toilet in a bathroom. These are rendered illustrations of the design concept, not photographs of finished products.</p>
+  <div class="gallery" id="gallery-grid"></div>
+</section>
+
+<section class="section tint" id="reviews">
+  <p class="eyebrow">Testimonials</p>
+  <h2>What early testers <em>are saying.</em></h2>
+  <div class="quotes" id="testimonial-grid"></div>
+  <p class="fine">Placeholder testimonials written for this concept site to show the layout. They are not from real customers, and SUNSEAT has not shipped any units. Replace with verified feedback before any real launch.</p>
+</section>
+
+<section class="section waitlist" id="waitlist">
+  <div class="split">
+    <div>
+      <p class="eyebrow">Waitlist</p>
+      <h2>Be first <em>to sit.</em></h2>
+      <p class="sub">Tell us your bowl shape and we will tell you when SUNSEAT is ready. No payment, no spam.</p>
+    </div>
+    <form class="form" id="waitlist-form" novalidate>
+      <label>Name<input name="name" autocomplete="name" required maxlength="100"></label>
+      <label>Email<input name="email" type="email" autocomplete="email" required maxlength="200"></label>
+      <label>Bowl shape<select name="shape"><option>Elongated</option><option>Round</option><option>Not sure</option></select></label>
+      <label>Favorite style<select name="style"><option>Comfort Plus</option><option>Kohler-style</option><option>Delta-style</option><option>Glacier Bay-style</option><option>Builder's Grade</option></select></label>
+      <label class="hp" aria-hidden="true">Leave blank<input name="website" tabindex="-1" autocomplete="off"></label>
+      <button class="btn btn-dark" type="submit">Join the waitlist</button>
+      <p class="form-msg" id="waitlist-form-msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<section class="section dark invest" id="invest">
+  <div class="split">
+    <div>
+      <p class="eyebrow">For investors</p>
+      <h2>SUNSEAT is <em>seeking investors.</em></h2>
+      <p class="sub">We are raising a pre-seed round to finish prototypes, run safety and dose testing, and prepare regulatory review. Tell us who you are and we will share the deck.</p>
+      <ul class="spec"><li>Large replacement market: seats are swapped constantly.</li><li>Standard footprint, so no new installation behavior.</li><li>Honest roadmap: testing before claims.</li></ul>
+    </div>
+    <form class="form" id="investor-form" novalidate>
+      <label>Name<input name="name" autocomplete="name" required maxlength="100"></label>
+      <label>Email<input name="email" type="email" autocomplete="email" required maxlength="200"></label>
+      <label>Firm / angel<input name="firm" maxlength="150"></label>
+      <label>Typical check size<select name="check"><option>Under $25k</option><option>$25k–$100k</option><option>$100k–$500k</option><option>$500k+</option></select></label>
+      <label>Message<textarea name="message" rows="3" maxlength="1000"></textarea></label>
+      <label class="hp" aria-hidden="true">Leave blank<input name="website" tabindex="-1" autocomplete="off"></label>
+      <button class="btn btn-light" type="submit">Request the deck</button>
+      <p class="form-msg" id="investor-form-msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
 </section>
 
 <section class="section dark" id="engineering">
@@ -140,7 +197,7 @@
       <li>Battery life targets (months of typical use per charge) are design goals, not measurements.</li>
       <li>This is not medical advice. Ask a healthcare professional about your vitamin D needs.</li>
     </ul>
-    <p class="fine">SUNSEAT is not affiliated with SOLIUS, Forbes, the FDA, Delta, Kohler, Glacier Bay or The Home Depot. This site collects no personal information.</p>
+    <p class="fine">SUNSEAT is not affiliated with SOLIUS, Forbes, the FDA, Delta, Kohler, Glacier Bay or The Home Depot. Waitlist and investor forms store entries in your browser unless a mail endpoint is configured.</p>
   </div>
 </section>
 
@@ -152,7 +209,7 @@
     <details><summary>Can I match my color?</summary><p>Eight colors are planned, including White, Bone, Biscuit and Almond to match common fixture finishes. Fixture colors vary by manufacturer and age, so compare to a sample in person.</p></details>
     <details><summary>Is it safe?</summary><p>That is exactly what testing would need to show. The design uses a timer, sit sensor and a low-dose target, but nothing is validated yet. See the status section.</p></details>
     <details><summary>Does it really give you vitamin D?</summary><p>UVB does drive vitamin D synthesis in skin. Whether a seated exposure area delivers a meaningful amount is unproven.</p></details>
-    <details><summary>Can I buy one?</summary><p>Not yet. There are no orders or waitlist on this site.</p></details>
+    <details><summary>Can I buy one?</summary><p>Not yet. Join the waitlist above and we will email you when it is ready; no orders are taken today.</p></details>
   </div>
 </section>
 </main>
