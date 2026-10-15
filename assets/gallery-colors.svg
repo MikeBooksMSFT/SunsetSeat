@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <defs>
+    <linearGradient id="room" x2="0" y2="1"><stop stop-color="#f9f4e8"/><stop offset="1" stop-color="#d7e0d1"/></linearGradient>
+    <filter id="shadow"><feGaussianBlur stdDeviation="9"/></filter>
+  </defs>
+  <rect width="800" height="520" fill="url(#room)"/>
+  <path d="M0 382h800v138H0z" fill="#b8a181"/>
+  <path d="M0 395h800M100 382l45 138m145-138 30 138m160-138 8 138m165-138-24 138" stroke="#8d795f" stroke-width="3" opacity=".45"/>
+  <text x="62" y="82" fill="#123524" font-family="system-ui,sans-serif" font-size="15" font-weight="700" letter-spacing="2">FIND YOUR FIXTURE'S PLUS-ONE</text>
+  <text x="62" y="121" fill="#123524" font-family="Georgia,serif" font-size="32" font-style="italic">Eight planned colors. Zero new habits.</text>
+  <ellipse cx="403" cy="386" rx="312" ry="46" fill="#123524" opacity=".2" filter="url(#shadow)"/>
+  <g transform="translate(73 181)">
+    <path d="M13 62q0-16 19-18h112q18 2 18 18l-6 55q-3 23-24 24H43q-21-1-24-24z" fill="#f7f7f4" stroke="#aeb9b3" stroke-width="4"/>
+    <path d="M42 66h92l-5 36q-1 12-13 13H60q-12-1-13-13z" fill="#dce6e1"/>
+    <path d="M66 72h44l-3 27q-1 7-7 7H76q-6 0-7-7z" fill="#9bbcb9"/>
+    <rect x="40" y="38" width="18" height="29" rx="6" fill="#c9d0cd"/><rect x="120" y="38" width="18" height="29" rx="6" fill="#c9d0cd"/>
+    <text x="39" y="171" fill="#123524" font-family="system-ui,sans-serif" font-size="15" font-weight="700">WHITE</text>
+  </g>
+  <g transform="translate(270 181)">
+    <path d="M13 62q0-16 19-18h112q18 2 18 18l-6 55q-3 23-24 24H43q-21-1-24-24z" fill="#e3d2b0" stroke="#ab9a7c" stroke-width="4"/>
+    <path d="M42 66h92l-5 36q-1 12-13 13H60q-12-1-13-13z" fill="#d9c6a5"/>
+    <path d="M66 72h44l-3 27q-1 7-7 7H76q-6 0-7-7z" fill="#a8b9a0"/>
+    <rect x="40" y="38" width="18" height="29" rx="6" fill="#c4b99f"/><rect x="120" y="38" width="18" height="29" rx="6" fill="#c4b99f"/>
+    <text x="34" y="171" fill="#123524" font-family="system-ui,sans-serif" font-size="15" font-weight="700">BISCUIT</text>
+  </g>
+  <g transform="translate(467 181)">
+    <path d="M13 62q0-16 19-18h112q18 2 18 18l-6 55q-3 23-24 24H43q-21-1-24-24z" fill="#a9b0b3" stroke="#737c80" stroke-width="4"/>
+    <path d="M42 66h92l-5 36q-1 12-13 13H60q-12-1-13-13z" fill="#969fa2"/>
+    <path d="M66 72h44l-3 27q-1 7-7 7H76q-6 0-7-7z" fill="#718b8b"/>
+    <rect x="40" y="38" width="18" height="29" rx="6" fill="#899194"/><rect x="120" y="38" width="18" height="29" rx="6" fill="#899194"/>
+    <text x="35" y="171" fill="#123524" font-family="system-ui,sans-serif" font-size="15" font-weight="700">MIST GRAY</text>
+  </g>
+  <g transform="translate(626 181) scale(.82)">
+    <path d="M13 62q0-16 19-18h112q18 2 18 18l-6 55q-3 23-24 24H43q-21-1-24-24z" fill="#232427" stroke="#111" stroke-width="4"/>
+    <path d="M42 66h92l-5 36q-1 12-13 13H60q-12-1-13-13z" fill="#3b3c3e"/>
+    <path d="M66 72h44l-3 27q-1 7-7 7H76q-6 0-7-7z" fill="#536567"/>
+    <rect x="40" y="38" width="18" height="29" rx="6" fill="#55585b"/><rect x="120" y="38" width="18" height="29" rx="6" fill="#55585b"/>
+    <text x="46" y="171" fill="#123524" font-family="system-ui,sans-serif" font-size="15" font-weight="700">BLACK</text>
+  </g>
+</svg>
