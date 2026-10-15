@@ -102,6 +102,80 @@
     return t + '</svg>';
   }
 
+
+  function tiltSVG(o) {
+    var s = STYLES[o.style], sh = SHAPES[o.shape], base = COLORS[o.color][1], dark = mix(base, '#000000', .38), edge = mix(base, '#000000', .2);
+    var outer = ringPath(50, 70, 350, 70 + sh[1], s.rt, sh[2]), t = '', i, h = 400 + (o.shape === 'round' ? 0 : 20);
+    t += '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-40 -20 480 ' + h + '" focusable="false" aria-hidden="true"><defs><radialGradient id="tg' + (++uid) + '"><stop offset="0" stop-color="#000" stop-opacity=".35"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient></defs>';
+    t += '<ellipse cx="200" cy="' + (h - 90) + '" rx="210" ry="40" fill="url(#tg' + uid + ')"/>';
+    t += '<g transform="translate(0 40) scale(1 .62)">';
+    var th = s.cushion ? 22 : 13;
+    for (i = th; i > 0; i--) t += '<path d="' + outer + '" transform="translate(0 ' + i * 1.3 + ')" fill="' + (i > th - 3 ? dark : edge) + '"/>';
+    t += seatBody(o) + '</g></svg>';
+    return t;
+  }
+
+  function sceneSVG(o) {
+    var base = COLORS[o.color][1], dark = mix(base, '#000000', .3), light = mix(base, '#ffffff', .6), id = 'sc' + (++uid);
+    var p = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" focusable="false" aria-hidden="true"><defs>' +
+      '<linearGradient id="' + id + 'w" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3efe6"/><stop offset="1" stop-color="#d9d2c3"/></linearGradient>' +
+      '<linearGradient id="' + id + 'f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9a68a"/><stop offset="1" stop-color="#8a775c"/></linearGradient>' +
+      '<linearGradient id="' + id + 'p" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".6" stop-color="#eef0f0"/><stop offset="1" stop-color="#c3cbcf"/></linearGradient>' +
+      '<linearGradient id="' + id + 's" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="' + light + '"/><stop offset=".5" stop-color="' + base + '"/><stop offset="1" stop-color="' + dark + '"/></linearGradient>' +
+      '<radialGradient id="' + id + 'l" cx=".25" cy=".25" r=".8"><stop offset="0" stop-color="#ffd89a" stop-opacity=".75"/><stop offset="1" stop-color="#ffd89a" stop-opacity="0"/></radialGradient>' +
+      '<filter id="' + id + 'b"><feGaussianBlur stdDeviation="8"/></filter></defs>';
+    p += '<rect width="800" height="380" fill="url(#' + id + 'w)"/>';
+    for (var x = 0; x < 800; x += 80) p += '<path d="M' + x + ' 0V380" stroke="#c9c1b0" stroke-width="1.5"/>';
+    for (var y = 0; y < 380; y += 60) p += '<path d="M0 ' + y + 'H800" stroke="#c9c1b0" stroke-width="1.5"/>';
+    p += '<rect x="70" y="60" width="150" height="190" rx="6" fill="#bfe3f2" stroke="#fff" stroke-width="10"/><path d="M145 60V250M70 155H220" stroke="#fff" stroke-width="6"/>';
+    p += '<rect y="380" width="800" height="140" fill="url(#' + id + 'f)"/><rect y="368" width="800" height="14" fill="#f8f5ee"/>';
+    for (x = -100; x < 900; x += 90) p += '<path d="M' + (400 + (x - 400) * 1.0) + ' 382L' + (400 + (x - 400) * 1.6) + ' 520" stroke="#7a6a52" stroke-width="1.5" opacity=".5"/>';
+    p += '<ellipse cx="420" cy="472" rx="250" ry="26" fill="#000" opacity=".3" filter="url(#' + id + 'b)"/>';
+    p += '<rect x="560" y="150" width="190" height="125" rx="14" fill="url(#' + id + 'p)" stroke="#aab4b8" stroke-width="2"/>';
+    p += '<rect x="552" y="138" width="206" height="20" rx="10" fill="url(#' + id + 'p)" stroke="#aab4b8" stroke-width="2"/><circle cx="655" cy="128" r="9" fill="#d5dadc" stroke="#8d979b"/>';
+    p += '<rect x="440" y="415" width="110" height="48" rx="8" fill="url(#' + id + 'p)" stroke="#aab4b8" stroke-width="2"/>';
+    p += '<path d="M330 276H565V330Q565 395 530 418H450Q335 405 330 330Z" fill="url(#' + id + 'p)" stroke="#aab4b8" stroke-width="2"/>';
+    p += '<path d="M350 330Q352 380 440 400" stroke="#fff" stroke-width="6" fill="none" opacity=".8" stroke-linecap="round"/>';
+    p += '<path d="M548 268L572 150L536 142L508 262Z" fill="url(#' + id + 's)" stroke="' + dark + '" stroke-width="1.5"/>';
+    p += '<path d="M322 276Q322 258 344 258H556V282H346Q322 282 322 276Z" fill="url(#' + id + 's)" stroke="' + dark + '" stroke-width="1.5"/>';
+    p += '<path d="M344 263H548" stroke="' + light + '" stroke-width="3" opacity=".8"/>';
+    p += '<circle cx="548" cy="270" r="8" fill="#d5dadc" stroke="#8d979b"/>';
+    p += '<rect width="800" height="520" fill="url(#' + id + 'l)"/></svg>';
+    return p;
+  }
+
+  function topRoomSVG(o) {
+    var id = 'tr' + (++uid), t = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" focusable="false" aria-hidden="true"><defs><radialGradient id="' + id + '" cx=".5" cy=".5" r=".7"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#000" stop-opacity=".25"/></radialGradient></defs>';
+    t += '<rect width="800" height="520" fill="#d8d3c8"/>';
+    for (var x = 0; x < 800; x += 100) t += '<path d="M' + x + ' 0V520" stroke="#b8b2a4" stroke-width="3"/>';
+    for (var y = 0; y < 520; y += 100) t += '<path d="M0 ' + y + 'H800" stroke="#b8b2a4" stroke-width="3"/>';
+    t += '<rect x="0" y="0" width="800" height="26" fill="#efe9dc"/><rect x="40" y="260" width="200" height="120" rx="14" fill="#7fa6b5" opacity=".85"/><path d="M60 300H220M60 330H220" stroke="#fff" stroke-width="5" opacity=".6"/>';
+    t += '<rect x="400" y="30" width="190" height="60" rx="14" fill="#fbfbf8" stroke="#aab4b8" stroke-width="2"/>';
+    t += '<g transform="translate(300 20) scale(.62)">' + seatBody(o) + '</g>';
+    t += '<rect width="800" height="520" fill="url(#' + id + ')"/></svg>';
+    return t;
+  }
+
+  var GALLERY = [
+    ['Comfort Plus in Biscuit, three-quarter view', 'tilt', { shape: 'elongated', style: 'comfort', color: 'biscuit' }],
+    ['Delta-style in White, three-quarter view', 'tilt', { shape: 'elongated', style: 'delta', color: 'white' }],
+    ['Kohler-style in Graphite, three-quarter view', 'tilt', { shape: 'elongated', style: 'kohler', color: 'graphite' }],
+    ['Round Glacier Bay-style in Bone', 'tilt', { shape: 'round', style: 'glacier', color: 'bone' }],
+    ['Builder\'s Grade in Almond, top view', 'top', { shape: 'round', style: 'builder', color: 'almond' }],
+    ['Comfort Plus in Mist Gray, top view', 'top', { shape: 'elongated', style: 'comfort', color: 'mist' }],
+    ['In the bathroom: Comfort Plus in White', 'scene', { shape: 'elongated', style: 'comfort', color: 'white' }],
+    ['In the bathroom: Delta-style in Biscuit', 'scene', { shape: 'elongated', style: 'delta', color: 'biscuit' }],
+    ['In the bathroom: Kohler-style in Black', 'scene', { shape: 'elongated', style: 'kohler', color: 'black' }],
+    ['In the bathroom: Glacier Bay-style in Linen', 'scene', { shape: 'elongated', style: 'glacier', color: 'linen' }],
+    ['Overhead in the bathroom: Delta-style in Bone', 'room', { shape: 'elongated', style: 'delta', color: 'bone' }],
+    ['Overhead in the bathroom: Comfort Plus in Graphite', 'room', { shape: 'elongated', style: 'comfort', color: 'graphite' }]
+  ];
+  var TESTIMONIALS = [
+    ['I replaced my seat in four minutes with one screwdriver. It closes so quietly my kids stopped slamming it.', 'Priya N.', 'Early-access tester, Austin'],
+    ['The Biscuit color actually matched my 1990s fixture, which no other seat has managed.', 'Dan R.', 'Early-access tester, Columbus'],
+    ['Comfort Plus is genuinely comfier. My guests asked where I bought it.', 'Marisol G.', 'Early-access tester, Tucson']
+  ];
+
   var state = { shape: 'elongated', style: 'comfort', color: 'white' };
   var $ = function (id) { return document.getElementById(id); };
 
@@ -120,7 +194,14 @@
         '<p class="price">From $' + s.price + '</p><p>' + s.desc + '</p>' +
         '<button type="button" class="btn btn-ghost" data-pick="' + k + '">Preview this style</button></article>';
     }).join('');
-    $('hero-seat').innerHTML = seatSVG({ shape: 'elongated', style: 'delta', color: 'white' });
+    $('gallery-grid').innerHTML = GALLERY.map(function (g) {
+      var svg = g[1] === 'tilt' ? tiltSVG(g[2]) : g[1] === 'top' ? seatSVG(g[2]) : g[1] === 'scene' ? sceneSVG(g[2]) : topRoomSVG(g[2]);
+      return '<figure class="shot shot-' + g[1] + '" role="img" aria-label="' + g[0] + '">' + svg + '<figcaption>' + g[0] + '</figcaption></figure>';
+    }).join('');
+    $('testimonial-grid').innerHTML = TESTIMONIALS.map(function (t) {
+      return '<figure class="quote"><blockquote><p>\u201c' + t[0] + '\u201d</p></blockquote><figcaption><strong>' + t[1] + '</strong><span>' + t[2] + '</span></figcaption></figure>';
+    }).join('');
+    $('hero-seat').innerHTML = '<div class="hero-pair">' + sceneSVG({ shape: 'elongated', style: 'comfort', color: 'white' }) + '</div>';
     $('anatomy-seat').innerHTML = anatomySVG({ shape: 'elongated', style: 'comfort', color: 'biscuit' });
   }
   function render() {
@@ -136,6 +217,36 @@
   }
 
   build(); render();
+  // Set to a form-handling endpoint (e.g. Formspree) to deliver submissions; otherwise they are stored only in this browser.
+  var FORM_ENDPOINT = '';
+  function handleForm(id, kind) {
+    var f = $(id), msg = $(id + '-msg');
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!f.checkValidity()) { f.reportValidity(); return; }
+      var data = { kind: kind, at: new Date().toISOString() };
+      new FormData(f).forEach(function (v, k) { data[k] = v; });
+      if (data.website) return;
+      delete data.website;
+      var done = function (sent) {
+        try {
+          var all = JSON.parse(localStorage.getItem('sunseat-' + kind) || '[]');
+          all.push(data); localStorage.setItem('sunseat-' + kind, JSON.stringify(all));
+        } catch (err) { /* storage unavailable */ }
+        msg.textContent = sent ? 'Thanks! You are on the list.' : 'Thanks! Saved on this device. This demo site has no mail server connected yet, so the team will not see it until an endpoint is configured.';
+        msg.className = 'form-msg ok';
+        f.reset();
+      };
+      if (FORM_ENDPOINT) {
+        fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
+          .then(function (r) { if (r.ok) done(true); else throw new Error('bad status'); })
+          .catch(function () { msg.textContent = 'Something went wrong. Please try again later.'; msg.className = 'form-msg err'; });
+      } else done(false);
+    });
+  }
+  handleForm('waitlist-form', 'waitlist');
+  handleForm('investor-form', 'investor');
+
   document.addEventListener('click', function (e) {
     var b = e.target.closest('[data-g],[data-pick]');
     if (!b) return;
