@@ -157,23 +157,15 @@
   }
 
   var GALLERY = [
-    ['Comfort Plus in Biscuit, three-quarter view', 'tilt', { shape: 'elongated', style: 'comfort', color: 'biscuit' }],
-    ['Delta-style in White, three-quarter view', 'tilt', { shape: 'elongated', style: 'delta', color: 'white' }],
-    ['Kohler-style in Graphite, three-quarter view', 'tilt', { shape: 'elongated', style: 'kohler', color: 'graphite' }],
-    ['Round Glacier Bay-style in Bone', 'tilt', { shape: 'round', style: 'glacier', color: 'bone' }],
-    ['Builder\'s Grade in Almond, top view', 'top', { shape: 'round', style: 'builder', color: 'almond' }],
-    ['Comfort Plus in Mist Gray, top view', 'top', { shape: 'elongated', style: 'comfort', color: 'mist' }],
-    ['In the bathroom: Comfort Plus in White', 'scene', { shape: 'elongated', style: 'comfort', color: 'white' }],
-    ['In the bathroom: Delta-style in Biscuit', 'scene', { shape: 'elongated', style: 'delta', color: 'biscuit' }],
-    ['In the bathroom: Kohler-style in Black', 'scene', { shape: 'elongated', style: 'kohler', color: 'black' }],
-    ['In the bathroom: Glacier Bay-style in Linen', 'scene', { shape: 'elongated', style: 'glacier', color: 'linen' }],
-    ['Overhead in the bathroom: Delta-style in Bone', 'room', { shape: 'elongated', style: 'delta', color: 'bone' }],
-    ['Overhead in the bathroom: Comfort Plus in Graphite', 'room', { shape: 'elongated', style: 'comfort', color: 'graphite' }]
+    ['The proposed seat, rendered in a familiar bathroom setting.', 'assets/gallery-studio.svg'],
+    ['The two-bolt replacement concept, at home in a bathroom.', 'assets/gallery-bathroom.svg'],
+    ['A proposed sensor and light module. Dose and safety testing come first.', 'assets/gallery-details.svg'],
+    ['A few planned fixture-friendly colors. Screen colors are only approximations.', 'assets/gallery-colors.svg']
   ];
   var TESTIMONIALS = [
-    ['I replaced my seat in four minutes with one screwdriver. It closes so quietly my kids stopped slamming it.', 'Priya N.', 'Early-access tester, Austin'],
-    ['The Biscuit color actually matched my 1990s fixture, which no other seat has managed.', 'Dan R.', 'Early-access tester, Columbus'],
-    ['Comfort Plus is genuinely comfier. My guests asked where I bought it.', 'Marisol G.', 'Early-access tester, Tucson']
+    ['A wellness device that respects my calendar: it scheduled itself for the one meeting I never skip.', 'The Routine Optimist', 'Fictional persona · attendance unverified', 'assets/persona-routine.svg', 'Illustrated fictional persona, the Routine Optimist'],
+    ['The hypothesis is bold. The evidence is not here yet. Finally, a pitch deck that admits both.', 'The Skeptical Scientist', 'Fictional persona · not a reviewer', 'assets/persona-science.svg', 'Illustrated fictional persona, the Skeptical Scientist'],
+    ['No new habit? Excellent. My current habit has perfect attendance and deeply questionable branding.', 'The Bathroom Philosopher', 'Fictional persona · not a customer', 'assets/persona-philosopher.svg', 'Illustrated fictional persona, the Bathroom Philosopher']
   ];
 
   var state = { shape: 'elongated', style: 'comfort', color: 'white' };
@@ -195,11 +187,10 @@
         '<button type="button" class="btn btn-ghost" data-pick="' + k + '">Preview this style</button></article>';
     }).join('');
     $('gallery-grid').innerHTML = GALLERY.map(function (g) {
-      var svg = g[1] === 'tilt' ? tiltSVG(g[2]) : g[1] === 'top' ? seatSVG(g[2]) : g[1] === 'scene' ? sceneSVG(g[2]) : topRoomSVG(g[2]);
-      return '<figure class="shot shot-' + g[1] + '" role="img" aria-label="' + g[0] + '">' + svg + '<figcaption>' + g[0] + '</figcaption></figure>';
+      return '<figure class="shot"><img src="' + g[1] + '" alt="' + g[0] + '" loading="lazy" decoding="async"><figcaption>' + g[0] + '</figcaption></figure>';
     }).join('');
     $('testimonial-grid').innerHTML = TESTIMONIALS.map(function (t) {
-      return '<figure class="quote"><blockquote><p>\u201c' + t[0] + '\u201d</p></blockquote><figcaption><strong>' + t[1] + '</strong><span>' + t[2] + '</span></figcaption></figure>';
+      return '<figure class="quote"><img src="' + t[3] + '" alt="' + t[4] + '" loading="lazy" decoding="async"><blockquote><p>\u201c' + t[0] + '\u201d</p></blockquote><figcaption><strong>' + t[1] + '</strong><span>' + t[2] + '</span></figcaption></figure>';
     }).join('');
     $('hero-seat').innerHTML = '<div class="hero-pair">' + sceneSVG({ shape: 'elongated', style: 'comfort', color: 'white' }) + '</div>';
     $('anatomy-seat').innerHTML = anatomySVG({ shape: 'elongated', style: 'comfort', color: 'biscuit' });
